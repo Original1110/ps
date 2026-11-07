@@ -1,10 +1,170 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>PS4 [5.05] 7.00 - 14.00 FW</title>
-<link rel="stylesheet" href="../style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>شـركة أورجينال أسيـوط -ش الجمهوريـة -بجوار فرع فودافون</title>
+<style>
+    :root {
+        --bg-overlay: rgba(13, 14, 16, 0.45);
+        --panel-bg: rgba(25, 28, 32, 0.75);
+        --border-glass: rgba(255, 255, 255, 0.12);
+        --accent: #a78bfa;
+        --accent-glow: rgba(167, 139, 250, 0.4);
+        --text-main: #ffffff;
+        --text-sub: #cbd5e1;
+        --ok: #7fd0a0;
+        --bad: #f87171;
+        --mono: Consolas, "DejaVu Sans Mono", monospace;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+        background-image: 
+            linear-gradient(var(--bg-overlay), var(--bg-overlay)),
+            url("icon0.png");
+        background-size: 100% 100%;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        color: var(--text-main);
+        min-height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+    }
+
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: inherit;
+        filter: blur(2px);
+        z-index: -1;
+    }
+
+    .shell {
+        width: 100%;
+        max-width: 650px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        z-index: 1;
+    }
+
+    .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--panel-bg);
+        border: 1px solid var(--border-glass);
+        padding: 15px 25px;
+        border-radius: 14px;
+        backdrop-filter: blur(12px);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    }
+
+    .brand-name {
+        font-size: 1.1rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    .wrap {
+        background: var(--panel-bg);
+        border: 1px solid var(--border-glass);
+        border-radius: 16px;
+        padding: 30px;
+        backdrop-filter: blur(12px);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero {
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 4px;
+        color: #ffffff;
+    }
+
+    .accent {
+        color: var(--accent);
+        text-shadow: 0 0 15px var(--accent-glow);
+    }
+
+    .hero-sub {
+        font-size: 0.95rem;
+        color: var(--text-sub);
+    }
+
+    .status-panel {
+        background: rgba(10, 12, 15, 0.85);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        box-shadow: inset 0 2px 8px rgba(0,0,0,0.6);
+        align-items: center;
+        text-align: center;
+    }
+
+    .status-text {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: var(--ok);
+    }
+
+    .foot {
+        text-align: center;
+        font-size: 0.85rem;
+        color: #ffffff;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+        padding-top: 5px;
+    }
+</style>
 </head>
 <body>
+
+<div class="shell">
+    <header class="topbar">
+        <span class="brand-name">شـركة أورجينال أسيـوط -ش الجمهوريـة -بجوار فرع فودافون</span>
+    </header>
+
+    <main class="wrap">
+        <section class="hero">
+            <h1 class="hero-title">Original<span class="accent">  Host</span></h1>
+            <p class="hero-sub">PS4 [5.05] 7.00 - 14.00 FW</p>
+        </section>
+
+        <section class="status-panel">
+            <div id="msgs" class="status-text">Loading GoldHEN v2.4b18.13... Please Wait</div>
+        </section>
+    </main>
+
+    <footer class="foot">
+        <p>© Developer By Ahmed Abdelsalam</p>
+    </footer>
+</div>
+
 <script>
 var uaFull = navigator.userAgent;
 var match = uaFull.match(/PlayStation 4[ /]([\d.]+)/i);
@@ -90,7 +250,7 @@ if (!isPS4) {
             script.onerror = onScriptError;
             document.head.appendChild(script);
         }
-		else if (fwNum == 14.00) {
+        else if (fwNum == 14.00) {
             var script = document.createElement('script');
             script.type = 'module';
             script.src = "slopkit/jb2.js";
@@ -100,10 +260,6 @@ if (!isPS4) {
     }
 }
 </script>
-<h1>GoldHEN</h1>
-
-<br>
-<h1 id=msgs style="font-size: 30px;margin-top: 77px;margin-bottom: 455px;">Loading GoldHEN v2.4b18.13... Please Wait</h1>
 
 </body>
 </html>
