@@ -28,8 +28,8 @@
     body {
         background-image: 
             linear-gradient(var(--bg-overlay), var(--bg-overlay)),
-            url("./img.jpg");
-        background-size: 100% 100%;
+            url("icon0.png");
+        background-size: cover;
         background-position: center;
         background-attachment: fixed;
         background-repeat: no-repeat;
@@ -151,7 +151,7 @@
 
     <main class="wrap">
         <section class="hero">
-            <h1 class="hero-title">Original<span class="accent">  Host</span></h1>
+            <h1 class="hero-title">Original<span class="accent"> ..Host</span></h1>
             <p class="hero-sub">PS4 [5.05] 7.00 - 14.00 FW</p>
         </section>
 
@@ -213,7 +213,7 @@ if (!isPS4) {
         }
         else if (fwNum >= 9.00 && fwNum <= 9.60) {
             var script = document.createElement('script');
-            script.type = 'module';
+            script.type.type = 'module';
             script.src = "900/alert.js";
             script.onerror = onScriptError;
             document.head.appendChild(script);
@@ -239,7 +239,7 @@ if (!isPS4) {
         else if (fwNum >= 12.50 && fwNum <= 13.00) {
             var script = document.createElement('script');
             script.type = 'module';
-            script.src = "slopkit/chain_poops.js";
+            script.src="slopkit/chain_poops.js";
             script.onerror = onScriptError;
             document.head.appendChild(script);
         }
