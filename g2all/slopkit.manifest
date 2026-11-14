@@ -3,7 +3,7 @@ CACHE MANIFEST
 CACHE:
 ../img.jpg
 ../style.css
-goldhen_2.4b18.14.bin
+goldhen_2.4b18.13.bin
 index.html
 slopkit\afterglow.js
 slopkit\chain_lapse.js
@@ -24,7 +24,6 @@ slopkit\patches\1302.bin
 slopkit\patches\1350.bin
 slopkit\patches\1352.bin
 slopkit\patches\1400.bin
-slopkit\patches\1402.bin
 
 NETWORK:
 *
