@@ -165,6 +165,7 @@
     </footer>
 </div>
 
+
 <script>
 var uaFull = navigator.userAgent;
 var match = uaFull.match(/PlayStation 4[ /]([\d.]+)/i);
@@ -190,7 +191,7 @@ if (!isPS4) {
             window.location.replace("cache900.html");
         } else if (fwNum >= 10.00 && fwNum <= 11.02) {
             window.location.replace("cachecss.html");
-        } else if (fwNum >= 11.50 && fwNum <= 14.00) {
+        } else if (fwNum >= 11.50 && fwNum <= 14.02) {
             window.location.replace("cacheslopkit.html");
         } else {
             document.addEventListener("DOMContentLoaded", () => {
@@ -250,7 +251,7 @@ if (!isPS4) {
             script.onerror = onScriptError;
             document.head.appendChild(script);
         }
-		else if (fwNum == 14.00) {
+		else if (fwNum == 14.00 || fwNum == 14.02) {
             var script = document.createElement('script');
             script.type = 'module';
             script.src = "slopkit/jb2.js";
@@ -260,6 +261,7 @@ if (!isPS4) {
     }
 }
 </script>
+
 
 </body>
 </html>
